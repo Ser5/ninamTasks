@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Висюлые старты</title>
+	<style>
+	*     {box-sizing: border-box; padding: 0; margin: 0;}
+	body  {padding: 15px 20px; font-family: Arial; color: #333;}
+
+	h1, h2 {color: #444;}
+	h1 {padding-bottom: 20px;}
+	h2 {padding-bottom: 12px; font-size: 18px;}
+
+	p     {padding-bottom: 15px;}
+	code  {font-family: Consolas, 'Courier New'; color: #358; font-weight: bold;}
+	input {padding: 3px 5px;}
+	label {display: block; padding-bottom: 10px; width: max-content; cursor: pointer;}
+
+	table  {border-collapse: collapse;}
+	th, td {padding: 5px 20px 5px 5px; vertical-align: top;}
+
+	.tasks {margin-bottom: 50px; border-bottom: 1px solid #888;}
+	.tasks__buttons     {}
+	.tasks__button      {display: block; width: 100%; margin-bottom: 10px;}
+	.tasks__description {max-width: 700px;}
+	</style>
+</head>
+<body>
+
+<div class="tasks">
+	<table class="tasks__table">
+		<tr>
+			<td class="tasks__which">
+				<h2>Чьё решение использовать?</h2>
+				<label><input type="radio" name="which" value="ninam" checked> Ninam</label>
+				<label><input type="radio" name="which" value="ser5"> Ser5</label>
+			</td>
+			<td>
+				<h2>Чё пилим?</h2>
+				<div class="tasks__buttons">
+					<input class="tasks__button" type="button" data-code="tree/recursion" value="Обход дерева рекурсивной функцией">
+					<input class="tasks__button" type="button" data-code="tree/loop"      value="Обход дерева циклом">
+					<input class="tasks__button" type="button" data-code="onclick/direct" value="Навешивание обработчиков на кнопки напрямую">
+				</div>
+			</td>
+			<td class="tasks__description"></td>
+		</tr>
+	</table>
+</div>
+
+<div class="task-content"></div>
+
+<div class="scripts"></div>
+
+<script src="js/js.js"></script>
+</body>
+</html>
